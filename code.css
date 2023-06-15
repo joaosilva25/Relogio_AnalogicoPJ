@@ -1,0 +1,85 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    color:white;
+}
+
+body {
+    background-color: #5271FF;
+    height:100vh;
+    
+}
+
+
+.clock {
+    height:500px;
+}
+
+
+.clock_body {
+    border: 5px solid white;
+    border-radius:50%;
+    height:400px;
+    width: 400px;
+    background-color: black;
+    box-shadow:0px -10px 300px rgba(255, 255, 255, 0.514);
+}
+
+p {
+    text-align: center;
+    font-size:12px;
+    position:relative;top:50px;
+}
+
+
+h5 {
+    position:relative;left:190px;
+    margin-top: 10px;
+}
+
+input[type="color"] {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 10 0 5px rgba(0, 0, 0, 0.3);
+    width:30px;
+    height:30px;
+    position:relative;left:200px;
+  }
+
+  
+.point {
+    background-color:white;
+    height:1em;
+    width:1em;
+    border-radius:50%;
+    position: relative;
+}
+
+
+.point_min,.point_sec,.point_hour {
+    position:absolute;
+    transform-origin:bottom;
+}
+
+.point_min {
+    width:3px;
+    height: 100px;
+    background-color:white; 
+    z-index:1;
+}
+
+.point_sec {
+    width:5px;
+    height: 150px;
+    background-color:rgb(223, 0, 0);
+    z-index:2;
+}
+
+.point_hour {
+    width:8px;
+    height: 60px;
+    background-color:rgb(18, 14, 255);
+    z-index:3;
+}
