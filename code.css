@@ -6,24 +6,23 @@
 }
 
 body {
-    background-color: #5271FF;
+    background-color: #000000;
     height:100vh;
     
 }
 
-
 .clock {
     height:500px;
 }
-
 
 .clock_body {
     border: 5px solid white;
     border-radius:50%;
     height:400px;
     width: 400px;
-    background-color: black;
-    box-shadow:0px -10px 300px rgba(255, 255, 255, 0.514);
+    background-color: rgb(10, 10, 10);
+    filter:drop-shadow(10px 10px 300px rgba(255, 255, 255, 0.493));
+    position: relative;
 }
 
 p {
@@ -48,38 +47,73 @@ input[type="color"] {
     position:relative;left:200px;
   }
 
-  
 .point {
     background-color:white;
     height:1em;
     width:1em;
     border-radius:50%;
     position: relative;
+    z-index:5;
 }
-
 
 .point_min,.point_sec,.point_hour {
     position:absolute;
     transform-origin:bottom;
+    border-radius:20px;
 }
 
 .point_min {
-    width:3px;
+    width:5px;
     height: 100px;
     background-color:white; 
     z-index:1;
+    transform:rotate(0deg);
+    top:100px;
 }
 
 .point_sec {
-    width:5px;
+    width:3px;
     height: 150px;
     background-color:rgb(223, 0, 0);
     z-index:2;
+    transform:rotate(0deg);
+    top:48px;
 }
 
 .point_hour {
-    width:8px;
-    height: 60px;
-    background-color:rgb(18, 14, 255);
+    width:5px;
+    height: 70px;
+    background-color:rgb(255, 255, 255);
     z-index:3;
+    transform:rotate(0deg);
+    top:126px;
+}
+
+@media (min-width:200px) and (max-width:500px) {
+
+    .clock_body {
+        height:250px;
+        width:250px;
+    }
+    .point_min {
+        top:20px;
+    }
+    .point_hour {
+        top:50px;
+    }
+
+    .point_sec {
+        top:20px;
+        height:100px;
+    }
+
+    .background_color {
+        justify-content:center;
+        position:relative;right:80%;
+    }
+
+    p {
+        font-size:10px;
+    }
+
 }
